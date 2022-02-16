@@ -1,0 +1,69 @@
+<!-- 
+    Mitch Gerhardt
+    Feb. 2022
+    Boids
+-->
+
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Boids</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
+
+
+  <script src="sketch.js"></script>
+  <script src="boid.js"></script>
+
+  <style>
+    .left {
+      float: left;
+      margin: 5px;
+      margin-right: 10px;
+      font-size: 18px;
+      padding: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="leftDiv" class="left">
+    <div id="canvascontainer"></div>
+  </div>
+
+  <div style="display: inline-block">
+    <div class="right">
+      <h2>Controls:</h2>
+      Perception: <input id="perceptionSlider" type="range" min="0" max="100" step="5" value="25"> <span
+        id="percep">1</span>
+      <br>
+      Cohesion: <input id="cohesionSlider" type="range" min="1" max="2" step="0.1" value="1.5"> <span
+        id="cohes">1</span>
+      <br>
+      Alignment: <input id="alignmentSlider" type="range" min="1" max="2" step="0.1" value="1"> <span
+        id="align">1</span>
+      <br>
+      Separation: <input id="separationSlider" type="range" min="1" max="2" step="0.1" value="2"> <span
+        id="sep">1</span>
+    </div>
+
+    <div class="right">
+      <h2>Description:</h2>
+      <p><b>Perception:</b> How far each boid can see in around itself
+        <br>
+        <b>Cohesion:</b> How much to move toward the center of local boids
+        <br>
+        <b>Alignment:</b> How much to steer toward the average heading of local boids
+        <br>
+        <b>Separation:</b> How much to avoid crowding local boids
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>

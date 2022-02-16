@@ -1,0 +1,90 @@
+<!-- 
+    Mitch Gerhardt
+    Feb. 2022
+    Blackjack
+-->
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>NEAT Racecar</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
+    <script src="https://d3js.org/d3.v2.min.js?2.9.3"></script>
+
+    
+    <script src="sketch.js"></script>
+	<script src="car.js"></script>
+	<script src="node.js"></script>
+	<script src="connection.js"></script>
+	<script src="genome.js"></script>
+	<script src="population.js"></script>
+
+    <style>
+		.left {
+			float: left;
+			margin: 5px;
+			margin-right: 10px;
+			font-size: 18px;
+		}
+		.right {
+			display: inline-block;
+			margin-left: 20px;
+		}
+		.current {
+			border-right: solid;
+			padding-right: 10px;
+			padding-bottom: 20px;
+			float: left;
+		}
+		.bottom {
+			border-top: solid;
+			margin-top: 125px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div id="leftDiv" class="left">
+		<div id="canvascontainer"></div>
+	</div>
+	
+    <div style="display: inline-block" >
+		<div class="right current">
+			<h2>Wins per Color:</h2>
+			Red: <span id="red"></span>
+			</br>
+			Green: <span id="green"></span>
+			</br>
+			Pink: <span id="pink"></span>
+			<br>
+			<h2>Options:</h2>
+			Speed: <input id="speedSlider" type="range" min="0" max="50" value="1"> <span id="speed">1</span>
+			<br/>
+		</div>
+	
+		<div class="right">
+			<h2>Best Genome:</h2>
+			Best Fitness: <span id="bestFitness"></span>
+			<br>
+			Current Generation: <span id="currGen"></span>
+			<br>
+		</div>
+
+		<div class="right current">
+			<h2>Game Info:</h2>
+			Frame Rate: <span id="fr"></span>
+			<br>
+		</div>
+
+		<div class="bottom">
+			<div id="svgContainer"></div>
+		</div>
+	</div>
+</body>
+
+</html>
