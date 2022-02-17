@@ -65,7 +65,6 @@ function keyPressed() {
     if (keyCode == 32) { // SPACE
         let x = floor(random(numPoints));
         let y = floor(random(numPoints));
-        console.log(x + ' ' + y);
         for (let i = -5; i <= 5; i++) {
             for (let j = -5; j <= 5; j++) {
               let col = (x + i + numPoints) % numPoints;
